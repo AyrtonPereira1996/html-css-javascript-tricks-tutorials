@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>How to make video gallery</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="media/vlcsnap-2020-09-27-20h15m10s000.png" alt="" width="100%">
+                    <img src="media/play.png" alt="" class="play-btn" onclick="playVideo('media/video.mp4')">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/vlcsnap-2020-09-27-20h15m30s607.png" alt="">
+                        <img src="media/play.png" alt="" class="play-btn" onclick="playVideo('media/video (1).mp4')">
+                    </div>
+
+                    <p>[Descricao do video]</p>
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/vlcsnap-2020-09-27-20h15m10s000 (cópia).png" alt="">
+                        <img src="media/play.png" alt="" class="play-btn" onclick="playVideo('media/video.mp4')">
+                    </div>
+
+                    <p>[Descricao do video]</p>
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="media/vlcsnap-2020-09-27-20h15m46s453.png" alt="">
+                        <img src="media/play.png" alt="" class="play-btn" onclick="playVideo('media/video (2).mp4')">
+                    </div>
+
+                    <p>[Descricao do video]</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="media/video.mp4" type="video/mp4">
+        </video>
+        <img src="media/close.png" alt="" class="close-btn"
+        onclick="stopVideo()"
+        >
+    </div>
+
+
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+function stopVideo(){
+    videoPlayer.style.display = "none";
+}
+
+function playVideo(file){
+    myVideo.src = file;
+    videoPlayer.style.display = "block";
+
+}
+
+</script>
+</body>
+
+</html>
