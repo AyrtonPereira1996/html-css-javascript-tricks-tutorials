@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #30333A;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%); /*para remover negative margins*/
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    width: 50px;
+    height: 50px;
+    background-color: #e59500;
+    margin: 10px 0;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+ul li .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*remove negative margins*/
+    font-size: 20px;
+}
+
+ul li.facebook{
+    background-color: #1877f2;
+}
+
+ul li.twitter{
+    background-color: #1da1f2;
+
+}
+
+ul li.instagram{
+    background-color: #c32aa3;
+}
+
+ul li.google{
+    background-color: #db4437;
+}
+
+ul li.whatsapp{
+    background-color:#25d366 ;
+}
+
+.slider{
+    position: absolute;/*relative to the list items*/
+    top: 0;
+    left: 51px;
+    width: 0px;
+    height: 50px;
+    background-color: #e59500;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 3px;
+    transition: all 0.5s 0.3s ease;
+}
+
+.slider p{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 900;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+ul li.facebook  div.slider{
+    background-color: #1877f2a2;
+}
+
+ul li.twitter  div.slider{
+    background-color: #1da0f2a2;
+}
+
+ul li.instagram  div.slider{
+    background-color: #c32aa3a2;
+}
+
+ul li.google  div.slider{
+    background-color: #db4437a2;
+}
+
+ul li.whatsapp  div.slider{
+    background-color:#25d366a2;
+}
+
+ul.social li:hover .slider {
+    width     : 180px;
+    transition: all .5s ease;
+}
+
+ul.social li:hover .slider span {
+    opacity   : 1;
+    transition: all 1s .2s ease;
+}
+
