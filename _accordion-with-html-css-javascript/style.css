@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+*{
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    background-color: aquamarine;
+}
+
+.accordion{
+    max-width: 800px;
+} 
+
+.accordion .contentBx{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label{
+   position: relative;
+   padding: 10px;
+   background-color: burlywood;
+   color: white;
+   cursor: pointer;
+}
+
+.accordion .contentBx .label::before{
+     content: "+";
+     position: absolute;
+     top: 50%;
+     right: 20px;
+     transform: translateY(-50%) ;
+     -webkit-transform: translateY(-50%) ;
+     -moz-transform: translateY(-50%) ;
+     -ms-transform: translateY(-50%) ;
+     -o-transform: translateY(-50%) ;
+     font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::before{
+    content: "-";
+}
+
+.accordion .contentBx .content{
+    position: relative;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content{
+    height: 150px;
+    padding: 10px;
+
+}
+

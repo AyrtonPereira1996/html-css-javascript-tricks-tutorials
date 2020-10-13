@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <title>Navbar Effect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Sansita Swashed', cursive;
+            ;
+        }
+
+        nav {
+            height: 100px;
+            background-color: #636e72;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40%;
+            color: #fff;
+            /* background-color: #fab1a0; */
+            padding-left: 55px;
+
+        }
+
+        .logo h1 {
+            text-transform: capitalize;
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        .menu {
+            width: 60%;
+            /* background-color: #00b894; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+        }
+
+
+        .menu a:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100% ;
+            width: 0;
+            height: 3px;
+            background-color: #fff ;
+            transition: all 0.5s linear;
+
+        }
+
+
+        .menu a:hover:before {
+           width: 100%;
+           background-color:#6c5ce7;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NAVABAR BEGIN -->
+    <nav>
+        <!-- LOGO NAVABAR -->
+        <div class="logo">
+            <h1>Navbar Effect</h1>
+        </div>
+
+        <!-- NAVABAR MENU -->
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+
+
+    </nav>
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
