@@ -63,6 +63,7 @@ body{
     overflow-y: auto;
 }
 
+
 .accordion .contentBx.active .content{
     height: 150px;
     padding: 10px;
