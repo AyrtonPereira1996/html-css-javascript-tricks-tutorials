@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transparent Div Box Tutorial</title>
+        <style>
+            body {
+                background-color: #de302f;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #fff;
+                font-weight: 100;
+            }
+
+            .container {
+                position: relative;
+                width: 600px;
+                height: auto;
+                border: 2px solid #fff;
+                margin: 100px auto;
+                padding: 30px;
+                box-sizing: border-box;
+            }
+
+            .container:after{
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-top: 0px solid #fff;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                border-left: 0px solid #fff;
+                top: 100%;
+                left: 50%; /*SE MODIFICAR ESTE VALOR IRA MOVIMENTAR O ARROW A ESQUERDA E DIREITA*/
+                margin-left: -25px;
+                transform: rotate(45deg);
+                margin-top: -25px;
+                background-color: #de302f;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi odit quas est obcaecati animi placeat
+            incidunt, odio facere dolorem deserunt! Veniam dolorem distinctio quasi sed ipsum harum doloribus
+            perspiciatis! Incidunt.
+        </div>
+    </body>
+
+</html>
