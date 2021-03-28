@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Index</title>
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="top-navbar">
+                <div class="hamburguer">
+                    <div class="hamburguer-inner">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="logo">
+                        Coding Market
+                    </div>
+                    <div class="right-menu">
+                        <ul>
+                            <li><i class="fas fa-user"></i>
+                                <div class="profile-dd">
+                                    <div class="dd-item">Profile</div>
+                                    <div class="dd-item">Change password</div>
+                                    <div class="dd-item">Logout</div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-container">
+                <div class="sidebar">
+                    <div class="sidebar-inner">
+                        <div class="profile">
+                            <div class="img">
+                                <img src="3551739.png" alt="profile picture">
+                            </div>
+                            <div class="profile-info">
+                                <p>Welcome</p>
+                                <p class="profile-name">Ayrton Pereira</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="" class="active">
+                                    <span class="icon"><i class="fas fa-dice-d6"></i></span>
+                                    <span class="title">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="icon"><i class="fab fa-delicious"></i></span>
+                                    <span class="title">Forms</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="icon"><i class="fab fa-elementor"></i></span>
+                                    <span class="title">UI Elements</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="icon"><i class="fas fa-chart-pie"></i></span>
+                                    <span class="title">Charts</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="">
+                                    <span class="icon"><i class="fas fa-border-all"></i></span>
+                                    <span class="title">Tables</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto non rem
+                        praesentium pariatur quibusdam facere incidunt quae. Cum repellat odio doloribus beatae
+                        necessitatibus quis, vel quod dicta blanditiis iure soluta.</div>
+                    <div class="item">Harum, vero! Saepe natus eum, aliquid maiores asperiores rerum nesciunt fuga
+                        repellat? Excepturi nisi quibusdam quis saepe recusandae expedita ea reiciendis molestias?
+                        Officiis omnis rem, quasi sequi ipsam harum eveniet.</div>
+                    <div class="item">Minima at velit atque quisquam placeat modi? Culpa, maxime, est error quisquam
+                        temporibus magnam laborum hic rem facilis optio ut repellendus nam, qui fuga at nemo. Eum
+                        provident eos nulla.</div>
+                    <div class="item">Nesciunt adipisci aspernatur, numquam consectetur dolorem ut quo impedit dolores
+                        deserunt vel? Iusto explicabo provident excepturi eligendi, ut sint ratione optio quidem
+                        voluptates ad error enim esse doloremque dolorum magni!</div>
+                    <div class="item">Voluptas repellat neque similique, nostrum explicabo sequi id atque ad consectetur
+                        inventore illum nam illo reiciendis fugit sunt ducimus tempore soluta, provident, sapiente
+                        voluptatum dolorem quasi? Tempore nihil provident pariatur!</div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="libs/fontawesome-5.15.2/js/all.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(' .top-navbar .menu .right-menu ul li .svg-inline--fa').on('click', function () {
+                    $('.profile-dd').toggleClass('active');
+                });
+
+                $(".hamburguer").on('click', function () {
+                    $(".wrapper").toggleClass("active");
+                })
+
+            });
+
+        </script>
+
+    </body>
+
+</html>
