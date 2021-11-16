@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background-color: #7159c1;
+    font-family: Roboto, Arial, sans-serif;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: white;
+}
+
+form {
+    margin: 20px 0;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 5px;
+}
+
+form .input-block {
+    margin-bottom: 20px;
+}
+
+form .input-block label {
+    font-size: 14px;
+    color: darkslateblue;
+}
+
+form .input-block input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 16px;
+    color: #7159c1;
+    border-radius: 2px;
+    border: 1px solid #ccddef;
+    outline-color: #7159c1;
+}
+
+form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color: #7159c1;
+    color: white;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+}
+
+form .btn-login:hover {
+    background-color: #7159c1c5;
+}
+
+form {
+    overflow: hidden;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+form .input-block:nth-child(1) {
+    animation-name: moveInputs;
+    animation-duration: 500ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+
+form .input-block:nth-child(2) {
+    animation-name: moveInputs;
+    animation-duration: 500ms;
+    animation-delay: 550ms;
+    animation-fill-mode: backwards;
+}
+
+form .btn-login {
+    animation-name: moveInputs;
+    animation-duration: 580ms;
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
+}
+
+
+/* classe que será chamada pelo js */
+
+.form-hide {
+    animation-name: formMoveDown;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, 0.23, 0, 1.71);
+}
+
+form.validate-error {
+    animation: nono 200ms linear, fade paused;
+    -webkit-animation: nono 200ms linear, fade paused;
+    animation-iteration-count: 2;
+}
+
+.squares li {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(222, 184, 135, 0.637);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation-name: upSquare;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* efeito que faz aparecer e desaparecer o form */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+
+/* Efeito que movimenta os campos do form */
+
+@keyframes moveInputs {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+        -webkit-transform: translateX(-35%);
+        -moz-transform: translateX(-35%);
+        -ms-transform: translateX(-35%);
+        -o-transform: translateX(-35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+
+/* efeito que move o form para baixo */
+
+@keyframes formMoveDown {
+    from {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+        -webkit-transform: translateY(100vh);
+        -moz-transform: translateY(100vh);
+        -ms-transform: translateY(100vh);
+        -o-transform: translateY(100vh);
+    }
+}
+
+
+/* efeito que ira abanar o form */
+
+@keyframes nono {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+        -moz-transform: translateX(-15%);
+        -ms-transform: translateX(-15%);
+        -o-transform: translateX(-15%);
+    }
+    70% {
+        transform: translateX(15%);
+        -webkit-transform: translateX(15%);
+        -moz-transform: translateX(15%);
+        -ms-transform: translateX(15%);
+        -o-transform: translateX(15%);
+    }
+    100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes upSquare {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-900px)rotate(960deg);
+        -webkit-transform: translateY(-900px)rotate(960deg);
+        -moz-transform: translateY(-900px)rotate(960deg);
+        -ms-transform: translateY(-900px)rotate(960deg);
+        -o-transform: translateY(-900px)rotate(960deg);
+    }
+}
