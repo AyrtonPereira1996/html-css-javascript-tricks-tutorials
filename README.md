@@ -1,7 +1,4 @@
-# My HTML, CSS, and JavaScript tricks tutorials made by me
+# Code of web programming tutorials
 
-**Explore my web system and give me a STAR✌️♥️**
+This repository has codes of some tutorials that I studied with to learn more about. Most of the tutorials was doing watching on youtube channels
 
-I created this repository to store the small projects tutorials that I made, and I will do during my programming and coding journey and to help too who want to see some extra code! 
-
-Most of the tutorials projects folders I did, was through YouTube CHANNELS ✌️.
